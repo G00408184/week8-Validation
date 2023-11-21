@@ -30,7 +30,7 @@ public class PersonController {
     }
 
     @PostMapping("/createPerson")
-    public ResponseEntity<String>creat(@Valid @RequestBody Person person){
+    public ResponseEntity<String>create(@Valid @RequestBody Person person){
         personService.savePerson(person);
         return  new ResponseEntity<>("person created successfully", HttpStatus.OK);
     }
